@@ -1,9 +1,8 @@
-const express = require("express");
+import express from 'express';
+import router from "./Router/router.js";
 const app = express();
 
-app.get("/", (req, res) => {
-    return res.send("Hello World");
-});
+app.use(router);
 
 app.listen(8000, () => {
     console.log("This app is listening to port 8000");
